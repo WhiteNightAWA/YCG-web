@@ -1,0 +1,225 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    border-radius: 100%;
+    width:50px;
+    height:50px;
+}
+
+.header {
+    font-family: monospace;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #131313;
+    text-decoration: none;
+    overflow: hidden;
+    position: fixed;
+    z-index: 100;
+    transition: all 1s;
+}
+header:hover {
+    height: 100px;
+}
+
+.nav_links {
+    list-style-type: none;
+}
+.nav_links li {
+    display: inline-block;
+    padding: 0 10px;
+}
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+.nav_links li a:hover {
+    color: #ffe500;
+}
+
+#header_button {
+    margin-left: 10px;
+    color: darkblue;
+    padding: 9px 30px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0 0 0 0 rgba(76, 215, 61, 0.5), 0 0 0 0 rgba(255, 190, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 20px;
+}
+#header_button::after {
+    content: "";
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: -50px;
+    right: -10px;
+    background-color: #c09518;
+    background-image: linear-gradient(255deg, #00ffd9 25%, #ffe500 50%, pink 75%, #3de007 100%);
+    z-index: -1;
+    transition: transform 0.5s ease;
+}
+#header_button:hover {
+    transform: translate(0, -60);
+    box-shadow: 10px -10px 25px 0 rgba(76, 215, 61, 0.5), -10px 10px 25px 0 rgba(255, 190, 0, 0.5);
+}
+#header_button:hover::after {
+    transform: rotate(180deg);
+}
+
+.header a {
+    border-radius: 10px;
+    border: 10px solid rgba(255, 255, 255, 0);
+}
+
+.header a:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+
+#header_text {
+    cursor: default;
+    margin-right: auto;
+    font-size: 20px;
+}
+
+.content1 {
+    margin-top: 50px;
+    height: 1000px;
+    position: relative;
+}
+.content1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: blur(10px);
+    background-image: url("./img/background1.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: filter 1s;
+}
+.content1:hover::before {
+    filter: blur(4px);
+}
+
+.ycg {
+    position: relative;
+    color: white;
+    text-align: center;
+    top: 40%;
+    font-size: 64px;
+    font-family: monospace;
+    transition: all 0.5s;
+}
+.ycg:hover {
+    text-shadow: 0 0 5px yellow, 0 0 25px yellow, 0 0 50px yellow, 0 0 200px yellow;
+}
+
+.content2 {
+    height: 1000px;
+    background-color: #212121;
+    transition: background-position;
+}
+
+#join_button {
+    top: 45%;
+    font-size: 20px;
+    position: relative;
+    box-sizing: border-box;
+    color: white;
+    display: inline-block;
+    font-family: monospace;
+    text-decoration: none;
+    padding: 10px 30px;
+    margin: 40px 0;
+    justify-content: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+#join_button:hover {
+    background-color: yellow;
+    color: black;
+    box-shadow: 0 0 5px yellow, 0 0 25px yellow, 0 0 50px yellow, 0 0 200px yellow;
+}
+#join_button span {
+    position: absolute;
+    display: block;
+}
+#join_button span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, transparent, yellow);
+    animation: animate1 1s infinite;
+}
+@keyframes animate1 {
+    0% {left: -100%;}
+    50%, 100% {left: 100%}
+}
+#join_button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(100deg, transparent, yellow);
+    animation: animate2 1s infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2 {
+    0% {top: -100%;}
+    50%, 100% {top: 100%}
+}
+#join_button span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(270deg, transparent, yellow);
+    animation: animate3 1s infinite;
+    animation-delay: 0.5s;
+}
+@keyframes animate3 {
+    0% {right: -100%;}
+    50%, 100% {right: 100%}
+}
+#join_button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, yellow);
+    animation: animate4 1s infinite;
+    animation-delay: 0.75s;
+}
+@keyframes animate4 {
+    0% {bottom: -100%;}
+    50%, 100% {bottom: 100%}
+}
+
+.p1 {
+    text-align: center;
+    align-content: center;
+    height: 100%;
+}
